@@ -18,16 +18,13 @@ Educational Machine Learning implementations with Python, NumPy and Matplotlib. 
 07_random_forest_from_scratch/         Bootstrap、節點隨機欄位與投票
 08_ensemble_learning/                 Bagging、AdaBoost、Gradient Boosting
 09_gaussian_naive_bayes_from_scratch/  Prior、Gaussian Likelihood 與 Posterior
-10_svm_form_scratch/                  Linear Soft-Margin SVM
+10_svm_from_scratch/                  Linear Soft-Margin SVM
 11_pca_from_scratch/                   PCA、投影與近似還原
-scripts/                             可重現執行與公開內容檢查
-tests/                              核心數字與邊界行為測試
-docs/                                發布前審查與第三方套件紀錄
 ML_REVIEW.md                         演算法總複習
 MATH_DERIVATION_NOTES.md              共用數學筆記
 ```
 
-SVM 資料夾沿用既有 `form` 拼字，沒有為發布而更名。各章的 `*_learning.py` 保存小型推導範例，主程式聚焦實驗；THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證證據。
+SVM 資料夾名稱已統一為 `10_svm_from_scratch`。各章的 `*_learning.py` 保存小型推導範例，主程式聚焦實驗；THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證證據。
 
 ## 安裝與執行
 
@@ -57,25 +54,31 @@ python 08_ensemble_learning/xgboost_lightgbm_catboost.py
 在無圖形介面的環境可用：
 
 ```bash
-MPLBACKEND=Agg python 10_svm_form_scratch/svm.py
+MPLBACKEND=Agg python 10_svm_from_scratch/svm.py
 ```
 
-直接執行範例會更新圖檔；下列全套執行檢查使用臨時副本，不修改 Repository 的圖片。
+直接執行範例會更新圖檔。公開版保留各章內建的 assert 與學習範例，未附發布前另行使用的測試／稽核工具。
 
-## 驗證指令
+## 驗證紀錄與範例執行
+
+發布前另以專案外工具完成 25 項針對性測試與完整依賴環境的 19 支範例檢查；工具不包含在目前精簡版中。各章程式仍保留形狀、數值與學習示例的檢查。
+
+可逐章執行下列範例；未安裝選用依賴時先略過 XGBoost：
 
 ```bash
-python -m unittest discover -s tests -v
-python scripts/run_examples.py
-# 已安裝選用依賴時，連 XGBoost 一併驗證：
-python scripts/run_examples.py --include-xgboost
-# 提交前檢查 staged 內容：
-python scripts/check_public_files.py --staged
-# 提交後檢查全部可達歷史：
-python scripts/check_public_files.py --history
+python 01_numpy_fundamentals/synthetic_classification.py
+python 02_knn_from_scratch/knn_classification.py
+python 03_kmeans_from_scratch/kmeans_clustering.py
+python 04_linear_regression_from_scratch/linear_regression.py
+python 05_logistic_regression_from_scratch/logistic_regression.py
+python 06_decision_tree_from_scratch/decision_tree.py
+python 07_random_forest_from_scratch/random_forest.py
+python 08_ensemble_learning/ensemble_learning.py
+python 08_ensemble_learning/gradient_boosting_regression.py
+python 09_gaussian_naive_bayes_from_scratch/gaussian_naive_bayes.py
+python 10_svm_from_scratch/svm.py
+python 11_pca_from_scratch/pca.py
 ```
-
-本輪實際結果：25 項針對性測試通過；完整依賴的乾淨環境 19 支範例通過；移除 XGBoost／SciPy 後，核心環境 18 支範例及 25 項測試通過。執行檢查另確認安靜匯入、資料切分完整且不重疊，以及受監測訓練呼叫的 Train 來源。詳見 [發布前審查](docs/PUBLICATION_REVIEW.md)。
 
 ## 固定 Seed 的實驗結果
 
@@ -117,8 +120,8 @@ python scripts/check_public_files.py --history
 
 ## 資料、授權與發布狀態
 
-資料均由程式生成；沒有真實設備或客戶資料、模型權重、套件原始碼或虛擬環境隨附。第三方套件與參考文件見 [THIRD_PARTY_NOTICES.md](docs/THIRD_PARTY_NOTICES.md)。
+資料均由程式生成；沒有真實設備或客戶資料、模型權重、套件原始碼或虛擬環境隨附。直接依賴為 NumPy（BSD 授權及其組件 notices）、Matplotlib（Matplotlib License Agreement）與選用 XGBoost（Apache-2.0）；依賴由套件管理器安裝，不隨附套件原始碼。Boosting 章節筆記保留官方參考文件連結。
 
-本輪未代替擁有人選擇專案的開源授權，尚無根目錄 LICENSE；需在公開前確認授權與靜態教學資產的來源／權利。第三方套件的授權不等於本專案自身的授權。
+本專案尚未指定根目錄 LICENSE；不宣稱已授予開源再利用授權。第三方套件的授權不等於本專案自身的授權。
 
-目前僅準備本機 Git 提交，**公開 Repository 建立、Push、可見性變更及遠端歷史操作須另獲確認**。
+目前版本聚焦演算法主線、必要教學檔、圖表及數學筆記。

@@ -42,4 +42,4 @@ python 06_decision_tree_from_scratch/decision_tree.py
 python 06_decision_tree_from_scratch/decision_tree_learning.py
 ```
 
-圖片保存到本資料夾，不會自動開啟視窗；測試與發布前審查見根目錄 README 與 docs/PUBLICATION_REVIEW.md。
+圖片保存到本資料夾，不會自動開啟視窗；發布前驗證範圍與實作限制見根目錄 README。

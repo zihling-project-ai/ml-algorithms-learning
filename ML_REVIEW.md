@@ -167,5 +167,5 @@ PCA 本次以 Train 變異保留門檻選維度，Validation 用於觀察還原�
 | [07_random_forest_from_scratch](07_random_forest_from_scratch/) | Random Forest |
 | [08_ensemble_learning](08_ensemble_learning/) | Bagging、AdaBoost、Gradient Boosting 與工具比較 |
 | [09_gaussian_naive_bayes_from_scratch](09_gaussian_naive_bayes_from_scratch/) | Gaussian Naive Bayes |
-| [10_svm_form_scratch](10_svm_form_scratch/) | Linear SVM，沿用現有資料夾拼字 |
+| [10_svm_from_scratch](10_svm_from_scratch/) | Linear SVM |
 | [11_pca_from_scratch](11_pca_from_scratch/) | PCA |

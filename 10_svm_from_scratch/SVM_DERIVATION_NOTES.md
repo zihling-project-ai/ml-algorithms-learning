@@ -303,10 +303,10 @@ C=1 時總目標 → 0.125
 從 MachineLearning 根目錄執行：
 
 ```bash
-.venv/bin/python 10_svm_form_scratch/svm.py
+.venv/bin/python 10_svm_from_scratch/svm.py
 ```
 
-資料夾沿用目前名稱 `10_svm_form_scratch`，本輪未重新命名。正式主線已移至 svm.py；本筆記中的手算與六筆訓練示範由 svm_learning.py 獨立執行。正式 C 比較、選模及 Test 結果見 README.md。
+資料夾名稱現為 `10_svm_from_scratch`。正式主線已移至 svm.py；本筆記中的手算與六筆訓練示範由 svm_learning.py 獨立執行。正式 C 比較、選模及 Test 結果見 README.md。
 
 
 

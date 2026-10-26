@@ -93,11 +93,11 @@ w 為特徵係數、b 為偏移、y 為真實標籤、n 為 Train 筆數；求�
 從 MachineLearning 根目錄執行：
 
 ```bash
-.venv/bin/python 10_svm_form_scratch/svm.py
-.venv/bin/python 10_svm_form_scratch/svm_learning.py
+.venv/bin/python 10_svm_from_scratch/svm.py
+.venv/bin/python 10_svm_from_scratch/svm_learning.py
 ```
 
-主程式保存圖檔後關閉圖形，不會自動彈出視窗。需要 NumPy 與 Matplotlib。資料夾沿用既有拼字 `10_svm_form_scratch`。
+主程式保存圖檔後關閉圖形，不會自動彈出視窗。需要 NumPy 與 Matplotlib。資料夾名稱已統一為 `10_svm_from_scratch`。
 
 已檢查切分編號不重複且無遺漏、Train 標準化平均約 0／標準差約 1、預測形狀與答案一致、Loss 與分數為有限值。原有手算對照與六筆示範保留；先前另以遠離 Hinge 轉折點的有限差分核對梯度。
 
