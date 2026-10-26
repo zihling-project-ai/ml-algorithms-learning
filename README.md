@@ -24,7 +24,7 @@ MATH_DERIVATION_NOTES.md              共用數學筆記
 ```
 
 各章的 `*_learning.py` 保存小型推導範例，主程式聚焦實驗；
-THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證證據。
+THEORY_QA.md 記錄回答與修正。
 
 
 ## 二、主要學習演算法總表
