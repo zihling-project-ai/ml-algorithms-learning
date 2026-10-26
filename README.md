@@ -67,18 +67,7 @@ K-Means 是完整資料的無監督探索，NumPy 基礎章沒有模型評估。
 
 
 
-## 四、尚未完成與實作限制
-
-- Derivative、Chain Rule、Matrix Gradient、SVM 最佳化及 PCA 特徵分解的完整獨立推導仍待複習；各章圖解與回答修正均保留。
-- SVM 是固定步幅批次次梯度教學版本，500 輪不是收斂保證。僅使用 Train 的額外比對顯示 C=0.1 尚能降低目標，不能將本表視為精確 SVM 解。
-- 06 的樹對零改善切分會停止，無法學會需先零改善分割的 XOR；07／08 允許這種分割，屬有意保留的章節差異。
-- 未實作 Kernel／RBF SVM、OOB、Soft Voting、Feature Importance 或完整 Boosting Framework。LightGBM／CatBoost 沒有本次訓練結果。
-- L06 分類比較沒有完全配對的 Bootstrap 隨機序列，AdaBoost 基模型也較淺，不能據此單次結果證明因果優劣或穩定性。
-- 單次合成資料與小型 Test 不構成真實應用效能保證；未完成重複切分、Calibration、公平性或部署評估。教學 API 仍有有限的輸入與數值範圍。
-- PCA 保留變異不等於保留分類準確率；本次只檢查還原誤差，未評估下游模型。
-
-
-## 五、資料、授權與發布狀態
+## 四、資料、授權與發布狀態
 資料均由程式生成；沒有真實設備或客戶資料、模型權重、套件原始碼或虛擬環境隨附。
 直接依賴為 NumPy（BSD 授權及其組件 notices）、Matplotlib（Matplotlib License Agreement）與選用 XGBoost（Apache-2.0）；
 依賴由套件管理器安裝，不隨附套件原始碼。Boosting 章節筆記保留官方參考文件連結。
