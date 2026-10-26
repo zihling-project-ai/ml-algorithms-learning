@@ -2,7 +2,8 @@
 
 A1-P01-L04｜Linear Regression 學習摘要
 
-本次以 Python、NumPy、Matplotlib 實作單一 Feature 的線性回歸，完成預測、MSE、解析梯度、參數更新與學習率比較。主線使用 200 筆帶雜訊資料；兩筆小資料與有限差分獨立保留，方便回頭理解梯度。
+本次以 Python、NumPy、Matplotlib 實作單一 Feature 的線性回歸，完成預測、MSE、解析梯度、參數更新與學習率比較。
+主線使用 200 筆帶雜訊資料；兩筆小資料與有限差分獨立保留，方便回頭理解梯度。
 
 
 ## 主線實驗
@@ -44,8 +45,8 @@ weight = weight - learning_rate * grad_weight
 bias = bias - learning_rate * grad_bias
 ```
 
-梯度描述參數增加時 Loss 的局部變化方向，因此更新往反方向走。負梯度會使參數增加，不代表固定的幾何旋轉方向；Bias 改變上下位置，Weight 改變直線斜率。
-
+梯度描述參數增加時 Loss 的局部變化方向，因此更新往反方向走。
+負梯度會使參數增加，不代表固定的幾何旋轉方向；Bias 改變上下位置，Weight 改變直線斜率。
 更新後重新預測並記錄 MSE。loss_history 包含第 0 輪的起始 Loss，加上 200 次更新後的值，共 201 個值。return 放在迴圈外，完成全部更新才回傳結果。
 
 ### 學習率比較
@@ -59,10 +60,9 @@ bias = bias - learning_rate * grad_bias
 | 0.5 | 0.217244 | 0.228299 |
 
 0.01 下降較慢；0.1、0.5 較快到達穩定區域，這次 0.5 沒有發散。不代表學習率越大越好，穩定性仍與資料尺度和 Loss 曲面有關。
-
 依固定 200 輪後的 Validation MSE 選出 **0.01**。它的訓練誤差略高、驗證誤差略低，差距很小，不能推論 0.01 對其他切分也最好。
-
 `min(result, key=get_validation_mse)` 比較每個學習率對應的驗證分數，再回傳該學習率，不是直接選最小的學習率數字。
+
 
 ### 最終評估
 
@@ -75,9 +75,11 @@ bias = bias - learning_rate * grad_bias
 | Validation MSE | 0.2278147834 |
 | Test MSE | 0.3864786075 |
 
-Test 使用選定實驗保存的 Weight、Bias，不使用比較迴圈最後留下的參數，也未合併 Train 與 Validation 重新訓練。Test 未參與設定選擇，評估後不依其分數回頭調參。
+Test 使用選定實驗保存的 Weight、Bias，不使用比較迴圈最後留下的參數，也未合併 Train 與 Validation 重新訓練。
+Test 未參與設定選擇，評估後不依其分數回頭調參。
+Test 誤差較高，但 40 筆樣本的抽樣與雜訊也會影響結果，不能僅憑這個落差判定過擬合。
+帶雜訊的資料不需要期待 MSE 為零；MSE 是平方單位的平均誤差，不是正確率。
 
-Test 誤差較高，但 40 筆樣本的抽樣與雜訊也會影響結果，不能僅憑這個落差判定過擬合。帶雜訊的資料不需要期待 MSE 為零；MSE 是平方單位的平均誤差，不是正確率。
 
 ### 主線圖表
 
@@ -175,9 +177,6 @@ difference_step 控制估計斜率的試探距離，learning_rate 控制正式�
 
 從 MachineLearning 根目錄執行：
 
-```bash
-source .venv/bin/activate
-
 # 主線：200 筆資料、切分、學習率比較與 Test
 python 04_linear_regression_from_scratch/linear_regression.py
 
@@ -185,11 +184,6 @@ python 04_linear_regression_from_scratch/linear_regression.py
 python 04_linear_regression_from_scratch/linear_regression_learning.py
 ```
 
-輔助檔匯入主線的共用函式，`if __name__ == "__main__"` 讓匯入時不會啟動主線實驗。兩個入口可獨立執行，不混用實驗變數。
-
-環境沿用專案 .venv：Python 3.14.7、NumPy 2.5.4、Matplotlib 3.11.2；完整依賴版本見根目錄 requirements.txt。兩個入口均已實際執行，數值與上述紀錄一致。
-
-三張 PNG 存在本資料夾，再次執行對應入口會更新同名檔案，不自動開啟視窗。原始混合版本備份為 linear_regression.before_cleanup.py.bak。
 
 ## 尚未涵蓋
 
