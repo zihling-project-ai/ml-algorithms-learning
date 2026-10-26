@@ -89,24 +89,8 @@ Baseline Validation Accuracy 為 **72.50%（29/40）**。KNN 三種設定皆優�
 ## Verify：已完成的學習驗證
 
 整理前逐步完成：3–4–5 三角形距離、人工資料 K=1/K=3 投票、多筆預測 `[0, 1]`、Accuracy 0.75、拒絕 K=0、索引完整性與三份切分不重疊檢查。
-
 為讓最終程式聚焦演算法與實驗流程，移除上述示範與測試區；保留 K 合法性及 Accuracy 形狀檢查。核心流程未使用已完成的模型或資料切分工具。
 
-## 環境與重新執行
-
-學習環境：Python 3.14.7、NumPy 2.5.4、Matplotlib 3.11.2。完整依賴版本位於專案根目錄 `requirements.txt`。
-
-在 macOS / Linux 的 MachineLearning 根目錄執行：
-
-```bash
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python 02_knn_from_scratch/knn_classification.py
-```
-
-若是全新環境，先使用對應 Python 版本執行 `python3 -m venv .venv`；既有環境不必重建。
-
-程式會輸出切分數量、三種 K 的 Training / Validation 分數、Baseline、選定 K 的 Test 分數，並在程式所在目錄保存三張 PNG。再次執行會更新同名圖檔；不自動開啟視窗。
 
 ## 實作限制與可解釋性
 
