@@ -28,6 +28,22 @@ THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證�
 
 
 
+| 演算法 | 學習類型／方法 | 核心原理 | 主要用途 |
+|---|---|---|---|
+| KNN | Supervised | 找最接近新資料的 K 個訓練樣本，根據鄰居預測 | Classification／Regression |
+| K-Means | Unsupervised | 反覆分配樣本並更新群中心，使群內平方距離縮小 | Clustering |
+| Linear Regression | Supervised | 學習 Features 與連續目標值之間的線性關係 | Regression |
+| Logistic Regression | Supervised | 將線性分數透過 Sigmoid 轉成類別 1 的預測機率 | Binary Classification |
+| Decision Tree | Supervised | 利用 Feature Threshold 逐步切分資料 | Classification／Regression |
+| Random Forest | Supervised；Ensemble／Bagging | 多棵隨機化 Decision Trees 整合預測 | Classification／Regression |
+| AdaBoost | Supervised；Ensemble／Boosting | 本次二元分類版本逐輪提高被錯誤分類樣本的相對訓練權重 | 本次實作為 Classification |
+| Gradient Boosting | Supervised；Ensemble／Boosting | 逐輪加入 Learner，沿降低 Loss 的方向修正預測 | Classification／Regression |
+| Naive Bayes | Supervised；Probabilistic | 使用 Bayes Theorem，假設 Features 在給定 Class 後條件獨立 | Classification |
+| SVM | Supervised | 分類時尋找兼顧 Margin 與違規懲罰的邊界 | Classification；回歸另有 SVR |
+| PCA | Unsupervised | 尋找投影變異最大的正交主方向 | Dimensionality Reduction |
+
+
+
 ## 固定 Seed 的實驗結果
 
 | 主線 | 選擇方式 | 本輪重現的結果 |
