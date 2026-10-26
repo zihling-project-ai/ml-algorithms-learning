@@ -5,7 +5,7 @@ Educational Machine Learning implementations with Python, NumPy and Matplotlib.
 期許藉由專案學習古典模型演算法：涵蓋資料建立、演算法核心、實驗比較、未見資料評估及數學圖解。
 
 
-## Repository 結構
+## 一、Repository 結構
 
 ```text
 01_numpy_fundamentals/                 合成資料與 NumPy
@@ -27,7 +27,7 @@ MATH_DERIVATION_NOTES.md              共用數學筆記
 THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證證據。
 
 
-## 一、主要學習演算法總表
+## 二、主要學習演算法總表
 
 | 演算法 | 學習類型／方法 | 核心原理 | 主要用途 |
 |---|---|---|---|
@@ -45,7 +45,7 @@ THEORY_QA.md 記錄回答與修正，不把所有學習歷程當成正式驗證�
 
 
 
-## 固定 Seed 的實驗結果
+## 三、固定 Seed 的實驗結果
 
 | 主線 | 選擇方式 | 本輪重現的結果 |
 |---|---|---|
@@ -67,7 +67,7 @@ K-Means 是完整資料的無監督探索，NumPy 基礎章沒有模型評估。
 
 
 
-## 尚未完成與實作限制
+## 四、尚未完成與實作限制
 
 - Derivative、Chain Rule、Matrix Gradient、SVM 最佳化及 PCA 特徵分解的完整獨立推導仍待複習；各章圖解與回答修正均保留。
 - SVM 是固定步幅批次次梯度教學版本，500 輪不是收斂保證。僅使用 Train 的額外比對顯示 C=0.1 尚能降低目標，不能將本表視為精確 SVM 解。
@@ -78,7 +78,7 @@ K-Means 是完整資料的無監督探索，NumPy 基礎章沒有模型評估。
 - PCA 保留變異不等於保留分類準確率；本次只檢查還原誤差，未評估下游模型。
 
 
-## 資料、授權與發布狀態
+## 五、資料、授權與發布狀態
 資料均由程式生成；沒有真實設備或客戶資料、模型權重、套件原始碼或虛擬環境隨附。
 直接依賴為 NumPy（BSD 授權及其組件 notices）、Matplotlib（Matplotlib License Agreement）與選用 XGBoost（Apache-2.0）；
 依賴由套件管理器安裝，不隨附套件原始碼。Boosting 章節筆記保留官方參考文件連結。
