@@ -1,0 +1,30 @@
+# Local Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+# Local editor / OS files
+.DS_Store
+.idea/
+.vscode/
+# Backups and review artifacts stay local
+*.bak
+*.tmp
+*.temp
+*.log
+.review-local/
+# Credentials / private configuration are never publication inputs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Superseded intermediate plots; current comparison remains tracked
+08_ensemble_learning/single_tree_vs_bagging.png
+08_ensemble_learning/single_tree_bagging_random_forest.png
