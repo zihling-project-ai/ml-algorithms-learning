@@ -152,17 +152,5 @@ zip 將同位置的真實標籤與機率配成一對。陣列版則一次處理�
 |---|---|
 | logistic_regression.py | 正式資料、切分、解析梯度訓練、選模、Test 與兩張圖 |
 | logistic_regression_learning.py | Sigmoid、展開 BCE、zip 與有限差分對照 |
-| logistic_regression.before_cleanup.py.bak | 初次整理前版本 |
-| logistic_regression.before_final_organization.py.bak | 本次收尾前版本 |
-
-從 MachineLearning 根目錄執行：
-
-```bash
-source .venv/bin/activate
-python 05_logistic_regression_from_scratch/logistic_regression.py
-python 05_logistic_regression_from_scratch/logistic_regression_learning.py
-```
-
-沿用專案環境 Python 3.14.7、NumPy 2.5.4、Matplotlib 3.11.2；依賴版本見根目錄 requirements.txt。兩個入口各自執行，匯入主線函式不會啟動正式實驗。
 
 主線會更新本資料夾內兩張 PNG，不自動開啟圖形視窗。數值與圖檔整理後再執行確認；尚未加入多 Feature、標籤雜訊、正則化或門檻調整實驗，不推論到真實業務資料。
