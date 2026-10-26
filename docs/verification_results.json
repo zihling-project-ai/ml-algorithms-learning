@@ -1,0 +1,451 @@
+{
+  "review_date": "2026-10-26",
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS Apple Silicon",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "xgboost_optional": "3.4.1"
+  },
+  "unit_tests": {
+    "count": 25,
+    "failures": 0,
+    "runs": [
+      "existing environment",
+      "clean full environment",
+      "clean core without xgboost or scipy"
+    ]
+  },
+  "baseline_examples": {
+    "count": 19,
+    "passed": 19
+  },
+  "clean_full_examples": [
+    {
+      "script": "01_numpy_fundamentals/synthetic_classification.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "02_knn_from_scratch/knn_classification.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 10
+      }
+    },
+    {
+      "script": "03_kmeans_from_scratch/kmeans_clustering.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "04_linear_regression_from_scratch/linear_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "04_linear_regression_from_scratch/linear_regression_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "05_logistic_regression_from_scratch/logistic_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "05_logistic_regression_from_scratch/logistic_regression_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "06_decision_tree_from_scratch/decision_tree.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 5
+      }
+    },
+    {
+      "script": "06_decision_tree_from_scratch/decision_tree_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "07_random_forest_from_scratch/random_forest.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "08_ensemble_learning/ensemble_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 4
+      }
+    },
+    {
+      "script": "08_ensemble_learning/gradient_boosting_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "08_ensemble_learning/xgboost_lightgbm_catboost.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          180,
+          60,
+          60
+        ],
+        "train_only_fit_calls": 0,
+        "xgboost_train_matrix_check": true
+      }
+    },
+    {
+      "script": "09_gaussian_naive_bayes_from_scratch/gaussian_naive_bayes.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 1
+      }
+    },
+    {
+      "script": "09_gaussian_naive_bayes_from_scratch/gaussian_naive_bayes_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "10_svm_form_scratch/svm.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "10_svm_form_scratch/svm_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "11_pca_from_scratch/pca.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "11_pca_from_scratch/pca_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    }
+  ],
+  "clean_core_examples": [
+    {
+      "script": "01_numpy_fundamentals/synthetic_classification.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "02_knn_from_scratch/knn_classification.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 10
+      }
+    },
+    {
+      "script": "03_kmeans_from_scratch/kmeans_clustering.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "04_linear_regression_from_scratch/linear_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "04_linear_regression_from_scratch/linear_regression_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "05_logistic_regression_from_scratch/logistic_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "05_logistic_regression_from_scratch/logistic_regression_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "06_decision_tree_from_scratch/decision_tree.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 5
+      }
+    },
+    {
+      "script": "06_decision_tree_from_scratch/decision_tree_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "07_random_forest_from_scratch/random_forest.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "08_ensemble_learning/ensemble_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 4
+      }
+    },
+    {
+      "script": "08_ensemble_learning/gradient_boosting_regression.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "09_gaussian_naive_bayes_from_scratch/gaussian_naive_bayes.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 1
+      }
+    },
+    {
+      "script": "09_gaussian_naive_bayes_from_scratch/gaussian_naive_bayes_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "10_svm_form_scratch/svm.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "10_svm_form_scratch/svm_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    },
+    {
+      "script": "11_pca_from_scratch/pca.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": [
+          120,
+          40,
+          40
+        ],
+        "train_only_fit_calls": 3
+      }
+    },
+    {
+      "script": "11_pca_from_scratch/pca_learning.py",
+      "exit": 0,
+      "audit": {
+        "import_quiet": true,
+        "split_check": "not applicable",
+        "train_only_fit_calls": 0
+      }
+    }
+  ],
+  "limits": [
+    "fixed synthetic datasets",
+    "not a guarantee of secret detection",
+    "not a convergence proof",
+    "not cross-platform certification"
+  ]
+}
