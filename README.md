@@ -1,4 +1,4 @@
-# ML Algorithms Learning
+# Machine Learning Algorithms 學習
 
 Educational Machine Learning implementations with Python, NumPy and Matplotlib. 
 由 NumPy 實作，未使用 Scikit-learn 模型或切分工具。
